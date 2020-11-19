@@ -6,11 +6,11 @@
     <title>Login</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
   </head>
-  <body>
+  <body class="bg-dark text-light">
 
-    <div class="container">
-      <div class="row" style="margin-top:45px">
-        <div class="col-md-4 col-md-offset-4">
+    <div class="container align-items-center justify-content-center" style="box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); border-radius: 20px;">
+      <div class="row justify-content-center center" style="margin-top:100px">
+        <div class="col-xs-8 col-sm-8 col-md-6 col-lg-4" style="padding: 30px">
           <form class="" action="{{ route('auth.check') }}" method="post">
             @csrf
 
@@ -23,7 +23,7 @@
             </div>
 
             <h4>Sign up to your account.</h4>
-            <hr>
+            <hr class="bg-light">
 
             <div class="form-group">
               <label for="email"><strong>Email</strong></label>

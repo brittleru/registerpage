@@ -6,11 +6,9 @@
     <title>User Profile</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
   </head>
-  <body>
-
-
-    <div class="container">
-      <div class="row" style="margin-top:45px">
+  <body class="bg-dark text-light">
+    <div class="container align-items-center justify-content-center" >
+      <div class="row justify-content-center center" style="margin-top:100px">
         <div class="col-md-6 col-md-offset-3">
         <h2>Your Profile</h2>
         {{-- <hr> --}}
@@ -21,7 +19,7 @@
                 </a>
               </h4>
             </strong> --}}
-          <table class="table table-hover">
+          <table class="table table-hover text-light">
             <thead>
               <th>First Name</th>
               <th>Last Name</th>

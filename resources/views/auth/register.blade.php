@@ -6,15 +6,15 @@
     <title>Register</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
   </head>
-  <body>
+  <body class="bg-dark text-light">
 
-    <div class="container">
-      <div class="row" style="margin-top:45px">
-        <div class="col-md-4 col-md-offset-4">
+    <div class="container align-items-center justify-content-center" style="box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); border-radius: 20px;">
+      <div class="row justify-content-center center" style="margin-top:100px">
+        <div class="col-md-6 " style="padding: 30px">
           <form action="{{ route('auth.create') }}" method="post">
             @csrf
             <h4>Become a member</h4>
-            <hr>
+            <hr class="bg-light">
 
             <div class="results">
               @if(Session::get('success'))
@@ -66,7 +66,7 @@
 
             <div class="form-group">
               <input type="checkbox" id="terms" name="terms" value="1">
-              <label for="terms">I agree to the <i><a href="#">Terms and Conditions</a></i> and the <i><a href="#">Privacy Policy</a></i>.</label>
+              <label for="terms">I agree to the <i><a href="/termsnconds" target="_blank">Terms and Conditions</a></i> and the <i><a href="/privacypoli" target="_blank">Privacy Policy</a></i>.</label>
               <span class="text-danger">@error('terms') {{ $message }} @enderror</span>
             </div>
 

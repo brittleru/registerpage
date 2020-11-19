@@ -106,7 +106,13 @@ class UserAuthController extends Controller
     //         return redirect('/profile');
     //     }
     // }
+    public function showCond() {
+      return view('termsnconds');
+    }
 
+    public function showPrivacy() {
+        return view('privacypoli');
+    }
 
 }
 // 'regex:/^.*(?=.{3,})(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[\d\X])(?=.*[!$#%]).*$/',

@@ -6,11 +6,11 @@
     <title>Edit Profile</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
   </head>
-  <body>
-    <div class="container">
-      <div class="row justify-content-center" style="margin-top:45px">
+  <body class="bg-dark text-light">
+    <div class="container align-items-center justify-content-center" >
+      <div class="row justify-content-center center" style="margin-top:100px">
         <div class="col-md-8">
-          <div class="card">
+          <div class="card bg-dark" style="box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); border-bottom-left-radius: 20px; border-bottom-right-radius: 20px">
             <div class="card-header text-light bg-dark" >
               Edit: {{ $user->first . " " . $user->last }}
             </div>

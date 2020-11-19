@@ -7,17 +7,17 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
   </head>
   <body class="bg-secondary">
-    <div class="container">
-      <div class="row justify-content-center" style="margin-top:45px">
+    <div class="container" >
+      <div class="row justify-content-center" style="margin-top:100px">
         <div class="col-md-8">
           <div class="card bg-dark">
             <div class="card-header text-light bg-dark" >
               All the users in the data base
               <a class="float-right" href="/logout">Logout</a>
             </div>
-            <div class="">
+            <div class="card-body">
 
-              <table class="table table-hover table-dark">
+              <table class="table table-hover table-dark ">
                 <thead>
                   <tr>
                     <th scope="col">#</th>

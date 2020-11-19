@@ -34,7 +34,9 @@ Route::get('/profile', 'UserAuthController@profile')->middleware('authCheck');
 
 Route::get('/logout', 'UserAuthController@logout');
 
+Route::get('/termsnconds', 'UserAuthController@showCond');
 
+Route::get('/privacypoli', 'UserAuthController@showPrivacy');
 
 
 Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function() {
