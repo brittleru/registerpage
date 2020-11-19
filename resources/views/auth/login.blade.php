@@ -42,7 +42,7 @@
             </div>
             <br>
 
-            <p>New User? <a href="register">Create a new Account.</a></p>
+            <p>New User? <a href="/register">Create a new Account.</a></p>
 
           </form>
         </div>

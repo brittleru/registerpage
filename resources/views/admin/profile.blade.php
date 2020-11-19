@@ -12,9 +12,15 @@
     <div class="container">
       <div class="row" style="margin-top:45px">
         <div class="col-md-6 col-md-offset-3">
-        <h4>Your Profile</h4>
-        <hr>
-
+        <h2>Your Profile</h2>
+        {{-- <hr> --}}
+            {{-- <strong>
+              <h4>
+                <a href="{{ route('admin.users.index') }}">
+                  User Management
+                </a>
+              </h4>
+            </strong> --}}
           <table class="table table-hover">
             <thead>
               <th>First Name</th>

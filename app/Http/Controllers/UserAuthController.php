@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 use App\Models\User;
+use App\Models\Role;
 
 class UserAuthController extends Controller
 {
@@ -38,6 +40,9 @@ class UserAuthController extends Controller
         $user->password2 = Hash::make($request->password2);
         $query = $user->save();
 
+        $role = Role::select('id')->where('name', 'user')->first();
+        $user->roles()->attach($role);
+
         if ($query) {
             return back()->with('success', "You have been successfuly registered!");
         }
@@ -60,6 +65,9 @@ class UserAuthController extends Controller
         if ($user) {
             if(Hash::check($request->password, $user->password)) {
                 $request->session()->put('LoggedUser', $user->id);
+                if ($user->hasRole('admin')) {
+                    return redirect(route('admin.users.index'));
+                }
                 return redirect('profile');
             }
             else {
@@ -89,6 +97,15 @@ class UserAuthController extends Controller
             return redirect('login');
         }
     }
+
+    // public function redirectTo() {
+    //     if (Auth::user()->hasRole('admin')) {
+    //         return view('admin.users.index');
+    //     }
+    //     else {
+    //         return redirect('/profile');
+    //     }
+    // }
 
 
 }
