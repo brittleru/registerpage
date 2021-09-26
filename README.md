@@ -1,6 +1,6 @@
 # Register Site for interview test
 ### Brief
-This was the interview test for my first job in programing at Waydev. I had to create a web application with register, login and to not modify the tables from phpMyAdmin. 
+This was the interview test for my first job in programing at Waydev. I had to create a web application in Laravel which should have a register page, a login page and to not modify the tables from phpMyAdmin. 
 
 
 ### My solution
